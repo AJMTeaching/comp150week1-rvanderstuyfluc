@@ -3,21 +3,27 @@
 # Lab 1
 # Problem 1
 # 1. Create a list called my_list with the values [1, 5, 'apple', 20.5].
-def make_list(my_list: list[int]) -> list[int]:
-    my_list = []
-    my_list.insert(1, 5, 'apple', 20.5)
+my_list = [1, 5, 'apple', 20.5]
+print(my_list)
 
 # 2. Using indexing, print the value 'apple' from my_list.
-def index_my_list(my_list: list[int]) -> list[int]:
-    print(my_list.index("'apple'"))
-    return my_list.index('apple')
+my_list = [1, 5, 'apple', 20.5]
+print(my_list[2])
 
 # 3. Add the value 10 to the end of my_list using the append() method. Print the updated list.
-def append_my_list(my_list: list[int]) -> list[int]:
-    my_list.append(10)
-    print (my_list.index) 
+my_list = [1, 5, 'apple', 20.5]
+my_list.append(10)
+print (my_list) 
+
 # 4. Remove the value 20.5 from my_list using the remove() method. Print the updated list.
+my_list = [1, 5, 'apple', 20.5, 10]
+my_list.remove(20.5)
+print(my_list)
+
 # 5. Reverse the order of the elements in my_list using a method. Print the reversed list.
+my_list = [1, 5, 'apple', 10]
+my_list.reverse()
+print(my_list)
 
 # Problem 2
 # 1. Create a dictionary called person with keys 'name', 'age', 'job' and values 'John', 30, 'teacher'.
