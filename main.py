@@ -49,11 +49,35 @@ def make_dictionary(person):
 make_dictionary(make_dictionary)
 
 # 2. Print the value corresponding to the 'job' key.
+def find_job(person):
+    person = {'name': 'John', 'age': 30, 'job': 'teacher'}
+    print(person['job'])
 
+find_job(find_job)
 
 # 3. Add a new key-value pair: 'city': 'Paris' to the person dictionary. Print the updated dictionary.
+def add_place(person):
+    person = {'name': 'John', 'age': 30, 'job': 'teacher'}
+    person['city'] = 'Paris'
+    print(person)
+
+add_place(add_place)
+
 # 4. Remove the 'age' key-value pair from person. Print the updated dictionary.
+def no_age(person):
+    person = {'name': 'John', 'age': 30, 'job': 'teacher', 'city': 'Paris'}
+    del person['age']
+    print(person)
+
+no_age(no_age)
+
 # 5. Iterate through the person dictionary and print out each key-value pair on a separate line.
+def iterate_dict(person):
+    person = {'name': 'John', 'job': 'teacher', 'city': 'Paris'}
+    for key, value in person.items():
+        print(f"Key: {key}, Value: {value}")
+
+iterate_dict(iterate_dict)
 
 # -----------------------------------------------------------------------------
 
