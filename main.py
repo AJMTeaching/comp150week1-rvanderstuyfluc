@@ -3,31 +3,54 @@
 # Lab 1
 # Problem 1
 # 1. Create a list called my_list with the values [1, 5, 'apple', 20.5].
-my_list = [1, 5, 'apple', 20.5]
-print(my_list)
+def make_list(my_list: list[any]) -> list[any]:
+    my_list = [1, 5, 'apple', 20.5]
+    print(my_list)
+
+make_list(make_list)
 
 # 2. Using indexing, print the value 'apple' from my_list.
-my_list = [1, 5, 'apple', 20.5]
-print(my_list[2])
+def find_apple(my_list: list[int]) -> list[int]:
+    my_list = [1, 5, 'apple', 20.5]
+    print(my_list[2])
+
+find_apple(find_apple)
 
 # 3. Add the value 10 to the end of my_list using the append() method. Print the updated list.
-my_list = [1, 5, 'apple', 20.5]
-my_list.append(10)
-print (my_list) 
+def add_to_list(my_list: list[int]) -> list[int]:
+    my_list = [1, 5, 'apple', 20.5]
+    my_list.append(10)
+    print (my_list) 
+
+add_to_list(add_to_list)
 
 # 4. Remove the value 20.5 from my_list using the remove() method. Print the updated list.
-my_list = [1, 5, 'apple', 20.5, 10]
-my_list.remove(20.5)
-print(my_list)
+def take_off_list(my_list: list[int]) -> list[int]:
+    my_list = [1, 5, 'apple', 20.5, 10]
+    my_list.remove(20.5)
+    print(my_list)
+
+take_off_list(take_off_list)
 
 # 5. Reverse the order of the elements in my_list using a method. Print the reversed list.
-my_list = [1, 5, 'apple', 10]
-my_list.reverse()
-print(my_list)
+def reverse_list(my_list: list[int]) -> list[int]:
+    my_list = [1, 5, 'apple', 10]
+    my_list.reverse()
+    print(my_list)
+
+reverse_list(reverse_list)
 
 # Problem 2
 # 1. Create a dictionary called person with keys 'name', 'age', 'job' and values 'John', 30, 'teacher'.
+def make_dictionary(person):
+    person = {'name': 'John', 'age': 30, 'job': 'teacher'}
+    print(person)
+
+make_dictionary(make_dictionary)
+
 # 2. Print the value corresponding to the 'job' key.
+
+
 # 3. Add a new key-value pair: 'city': 'Paris' to the person dictionary. Print the updated dictionary.
 # 4. Remove the 'age' key-value pair from person. Print the updated dictionary.
 # 5. Iterate through the person dictionary and print out each key-value pair on a separate line.
