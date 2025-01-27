@@ -139,8 +139,13 @@ def merge_lists(list1: list, list2: list) -> list:
     Returns:
     - list: A new sorted list containing all elements from list1 and list2
     """
-    merged = list1 + list2
-    merged.sort()
+    import itertools
+    merged = list(itertools.chain(list1, list2))
+    n = len(merged)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if merged[j] > merged[j+1]:
+                merged[j], merged[j+1] = merged[j+1], merged[j]
     return merged
 
 
