@@ -105,8 +105,12 @@ def count_vowels(s: str) -> int:
     Returns:
     - int: The number of vowels in the string
     """
-    # TODO: Implement this function
-    pass
+    vowel = "aeiouAEIOU"
+    count = 0
+    for char in {s}:
+        if char in vowel:
+            count += 1
+        return count
 
 
 # Unit Tests for count_vowels
@@ -135,8 +139,9 @@ def merge_lists(list1: list, list2: list) -> list:
     Returns:
     - list: A new sorted list containing all elements from list1 and list2
     """
-    # TODO: Implement this function
-    pass
+    merged = list1 + list2
+    merged.sort()
+    return merged
 
 
 # Unit Tests for merge_lists
