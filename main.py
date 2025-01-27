@@ -176,8 +176,8 @@ def word_lengths(words: list) -> list:
     Returns:
     - list: A list containing the lengths of the words
     """
-    # TODO: Implement this function
-    pass
+    word_length = [len(word) for word in (words)]
+    return word_length
 
 
 # Unit Tests for word_lengths
@@ -203,8 +203,7 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
-    # TODO: Implement this function
-    pass
+    
 
 
 # Unit Tests for reverse_string
