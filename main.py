@@ -108,8 +108,7 @@ def count_vowels(s: str) -> int:
     vowel = "aeiouAEIOU"
     count = 0
     for char in s:
-        char_to_check = char
-        if char_to_check in vowel:
+        if char in vowel:
             count += 1
     return count
 
@@ -177,7 +176,9 @@ def word_lengths(words: list) -> list:
     Returns:
     - list: A list containing the lengths of the words
     """
-    word_length = [len(word) for word in (words)]
+    word_length = []
+    for word in words:
+        word_length.append(len(word))
     return word_length
 
 
@@ -188,7 +189,7 @@ def test_word_lengths():
     test(lengths == [5, 5, 6])
     test(word_lengths([]) == [])
     test(word_lengths(["word"]) == [4])
-    test(word_lengths(["short", "mediummm", "longesttttt"]) == [5, 8, 10])
+    test(word_lengths(["short", "mediummm", "longesttttt"]) == [5, 8, 11])
     test(word_lengths(["", "a", "ab", "abc"]) == [0, 1, 2, 3])
     test(word_lengths(["  ", "a b", " c "]) == [2, 3, 3])
 
@@ -234,9 +235,6 @@ def intersection(list1: list, list2: list) -> list:
     """
     intersected_list = []
     size_of_list1 = len(list1)
-    
-    #print (f"List 1 is: {list1} - Size of List1 is: {size_of_list1}")
-    #print (f"List 2 is: {list2}")
     
     for itemct in range(size_of_list1):
         if list1[itemct] in list2:
