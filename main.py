@@ -232,7 +232,17 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
+    intersected_list = []
+    size_of_list1 = len(list1)
     
+    #print (f"List 1 is: {list1} - Size of List1 is: {size_of_list1}")
+    #print (f"List 2 is: {list2}")
+    
+    for itemct in range(size_of_list1):
+        if list1[itemct] in list2:
+            if list1[itemct] not in intersected_list:
+                intersected_list.append(list1[itemct])
+    return intersected_list
 
 
 # Unit Tests for intersection
