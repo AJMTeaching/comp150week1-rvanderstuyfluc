@@ -107,10 +107,11 @@ def count_vowels(s: str) -> int:
     """
     vowel = "aeiouAEIOU"
     count = 0
-    for char in {s}:
-        if char in vowel:
+    for char in s:
+        char_to_check = char
+        if char_to_check in vowel:
             count += 1
-        return count
+    return count
 
 
 # Unit Tests for count_vowels
@@ -203,8 +204,8 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
-    
-
+    reversed_s = s[::-1]
+    return reversed_s
 
 # Unit Tests for reverse_string
 def test_reverse_string():
@@ -231,8 +232,7 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
-    # TODO: Implement this function
-    pass
+    
 
 
 # Unit Tests for intersection
